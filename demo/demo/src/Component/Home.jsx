@@ -12,7 +12,7 @@ import { toast } from 'react-toastify'
     try {
       const uplodeing=async()=>{
         try {
-          const{data}= await axios.get(`http://localhost:3000/fethch?_limit=10&_page=${page}`)
+          const{data}= await axios.get(`http://localhost:3000/fethch?_limit=9&_page=${page}`)
           if(data.success){
             setCount(data.data)
             setTotalpage(data.totalpage)

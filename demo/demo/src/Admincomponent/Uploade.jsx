@@ -28,7 +28,7 @@ import { toast } from "react-toastify";
             const{data}=await axios.post("/upload",formdata)
             if(data.success){
                 toast.success("successsfully uploade the produet")
-                // reset()
+                reset()
             }else{
                 toast.warning(data.message)
                 
