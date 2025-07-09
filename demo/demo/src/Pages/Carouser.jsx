@@ -1,6 +1,6 @@
 import React from 'react'
 import image1 from"../assets/images.avif"
-import image2 from"../assets/image1.jpg"
+import image2 from"../assets/872571.jpg"
 import image3 from"../assets/image2.jpg"
 import "../App.css"
  function Carouser() {
