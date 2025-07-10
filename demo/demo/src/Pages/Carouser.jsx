@@ -17,22 +17,22 @@ import "../App.css"
     <div className="carousel-item active" data-bs-interval="10000">
       <img src={image1} className=" corouser d-block w-100 " alt="..." style={{ height: "650px", objectFit: "cover" }}/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Anime Collection</h5>
+        <p className='text-black font-family font-size'>You want a t-shirt with a design that says "About Me" or some kind of bio or intro?</p>
       </div>
     </div>
     <div className="carousel-item" data-bs-interval="2000">
       <img src={image3} className=" corouser d-block w-100 " style={{ height: "650px", objectFit: "cover" }} alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Gaming Collection</h5>
+        <p className='text-black font-family font-size'>You want a t-shirt with a design that says "About Me" or some kind of bio or intro?</p>
       </div>
     </div>
     <div className="carousel-item">
       <img src={image2} className=" corouser d-block w-100 " style={{ height: "650px", objectFit: "cover" }} alt="..."/>
       <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Fitness Collection</h5>
+        <p className='text-black font-family font-size'>You want a t-shirt with a design that says "About Me" or some kind of bio or intro?</p>
       </div>
     </div>
   </div>

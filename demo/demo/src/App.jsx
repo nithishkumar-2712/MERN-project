@@ -17,7 +17,7 @@ function App() {
   const[islogin,setislogin]=useState("")
   const  checkToken =async()=>{
     try {
-      const{data}=await axios.get("/token")
+      const{data}=await axios.get("/token")     
       if(data.success){
             // alert("successfully")
             setislogin(true)

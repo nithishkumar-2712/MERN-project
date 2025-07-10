@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Carouser from '../Pages/Carouser'
 import axios from '../config/axios'
 import"../App.css"
 import { toast } from 'react-toastify'
+import { AppContext } from '../App'
 
  function Home() {
-
   const[count,setCount]=useState([])
   const[totalpage,setTotalpage]=useState()
   const pagenation=(page)=>{   
