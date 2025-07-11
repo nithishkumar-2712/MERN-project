@@ -86,3 +86,45 @@ height: 100%;
       background-color: silver;
       color: aqua;
 }
+/* .animation{
+      width:100px;
+      height: 100px;
+      background-color:red;
+      border-radius: 50%;
+      border: 5px solid  orangered;
+      animation: circular 2s linear infinite alternate;
+}
+@keyframes circlar{
+      from{
+            transform:translateX(0) translateY(0);
+      }to{
+            transform:translateX(300px) translateY(300px);
+
+      }
+} */
+ .circle-container {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+ .animation {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  border-radius: 40%;
+  border: 5px solid white;
+  animation: circular 8s ease-in-out infinite forwards;
+}
+/*  */
+/* 
+@keyframes circular {
+  from {
+    transform: translateX(-3000px) translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(700px) translateY(0);
+    opacity: 1;
+  }
+} */

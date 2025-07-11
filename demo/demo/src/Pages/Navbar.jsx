@@ -43,7 +43,7 @@ import { AppContext } from '../App';
           </li>
           <li className="nav-item">
             {/* <a className="nav-link" href="#">Link</a> */}
-             <Link className='font-familyy text-light' to={"/about"}>ABOUT</Link>
+             <Link className='font-familyy text-light' to={"/about"}>AddtoCart</Link>
           </li>
           <li className="nav-item">
             {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}

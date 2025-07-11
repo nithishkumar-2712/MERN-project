@@ -8,6 +8,7 @@ import { AppContext } from '../App'
  function Home() {
   const[count,setCount]=useState([])
   const[totalpage,setTotalpage]=useState()
+  const[total,setTotal]=useState()
   const pagenation=(page)=>{   
     try {
       const uplodeing=async()=>{
@@ -16,6 +17,8 @@ import { AppContext } from '../App'
           if(data.success){
             setCount(data.data)
             setTotalpage(data.totalpage)
+            setTotal(data.total)
+
           } else{
             toast.warning(data.message)
           }
@@ -49,6 +52,7 @@ import { AppContext } from '../App'
   return (
     <>
     <Carouser/>
+
 <div className='bg-dark'>
     <h1 className='h1 font-family font-size text-light'> Multi-Product</h1>
     <div className=' container'>
