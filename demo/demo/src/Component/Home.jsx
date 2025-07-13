@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import Carouser from '../Pages/Carouser'
 import axios from '../config/axios'
 import"../App.css"
@@ -7,11 +7,9 @@ import { toast } from 'react-toastify'
   const[count,setCount]=useState([])
   const[totalpage,setTotalpage]=useState()
   const[total,setTotal]=useState()
-  const pagenation=(page)=>{   
+  const pagenation=async(page)=>{   
     try {
-      const uplodeing=async()=>{
-        try {
-          const{data}= await axios.get(`http://localhost:3000/fethch?_limit=9&_page=${page}`)
+      const{data}= await axios.get(`fethch?_limit=9&_page=${page}`)
           if(data.success){
             setCount(data.data)
             setTotalpage(data.totalpage)
@@ -20,18 +18,14 @@ import { toast } from 'react-toastify'
           } else{
             toast.warning(data.message)
           }
-        } catch (error) {
-          console.log(error.message)
-        }
-      }
-      uplodeing()
+      // uplodeing()
       
     } catch (error) {
       console.log(error)
     }
   }
   useEffect(()=>{
-    pagenation()
+    pagenation(1)
 
   },[])
   const handleclick=async( id,price)=>{
@@ -56,7 +50,7 @@ import { toast } from 'react-toastify'
     <div className=' container'>
       <div className='row'>
       { count.map((item,index)=>(
-        <div className=' col-12 col-md-6 col-lg-4 mb-4' key={index}>
+        <div className=' col-12 col-md-6 col-lg-4 mb-4' key={item._id ||index}>
     
        <div className="card animate__animated animate__fadeInLeft" style={{width: "18"}}>
                 <img src={`http://localhost:3000${item.file}`} className="card-img-top imgage" alt="..." width={200} height={350}/>
@@ -72,7 +66,7 @@ import { toast } from 'react-toastify'
         ))}
        <div>
         <button className='btn specal' onClick={()=>pagenation(1)}>FIRST</button>
-        {new Array(totalpage).fill(0).map((_,index)=>{
+        { totalpage > 0 && new Array(totalpage).fill(0).map((_,index)=>{
           return <button className='btn specal'key={index+1} onClick={()=>pagenation(index+1)}>{index+1}</button>
          
         })}
