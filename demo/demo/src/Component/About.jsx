@@ -87,8 +87,8 @@ import { toast } from 'react-toastify'
         <p className="card-text text-light font-family">STOCK:{item.product.stock}</p>
         <p className="card-text text-light font-family">PRICE:{item.product.price}</p>
         <p className="card-text text-light font-family">SUBTOTAL:{item.subTotal}</p>
-        <p className="card-text text-light font-family">SUBTOTAL:{item.quantity}</p>
-        <p className="card-text text-light font-family">userId:{item.userId}</p>
+        <p className="card-text text-light font-family">QUANTITY:{item.quantity}</p>
+        {/* <p className="card-text text-light font-family">userId:{item.userId}</p> */}
         <p className="card-text text-light font-family"><small className=" text-light font-family"> ABOUT:{item.product.about}</small></p>
         <a href="#" className="btn btn-danger" onClick={()=> handledelete(item._id)}> REMOVE</a><br></br>
         <a href="#" className="btn btn-success" onClick={()=>handleorder(item.product._id,item.subTotal,item.quantity)}>ORDER</a>

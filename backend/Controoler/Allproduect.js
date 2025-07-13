@@ -27,7 +27,7 @@ const createproduect=async(req,res)=>{
            res.json({success:false,message:error.message})
         
     }
- }
+ } 
   const Adminproduect=async(req,res)=>{
     try {
          const data=await AllproduectModel.find()
