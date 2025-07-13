@@ -52,7 +52,7 @@ import { toast } from 'react-toastify'
       { count.map((item,index)=>(
         <div className=' col-12 col-md-6 col-lg-4 mb-4' key={item._id ||index}>
     
-       <div className="card animate__animated animate__fadeInLeft" style={{width: "18"}}>
+       <div className="card animate__animated animate__fadeInLeft" style={{width: "18rem"}}>
                 <img src={`http://localhost:3000${item.file}`} className="card-img-top imgage" alt="..." width={200} height={350}/>
       <div  className="card-body">
                 <p className="card-text font-family"> S.NO: {index+1}</p>
