@@ -3,8 +3,6 @@ import Carouser from '../Pages/Carouser'
 import axios from '../config/axios'
 import"../App.css"
 import { toast } from 'react-toastify'
-import { AppContext } from '../App'
-
  function Home() {
   const[count,setCount]=useState([])
   const[totalpage,setTotalpage]=useState()
@@ -74,8 +72,6 @@ import { AppContext } from '../App'
         ))}
        <div>
         <button className='btn specal' onClick={()=>pagenation(1)}>FIRST</button>
-        {/* <button className='btn text-dark bg-light ' onClick={()=>pagenation()}>PRIVIES</button>
-        <button className='btn text-dark bg-light ' onClick={()=>pagenation()}>NEXT</button> */}
         {new Array(totalpage).fill(0).map((_,index)=>{
           return <button className='btn specal'key={index+1} onClick={()=>pagenation(index+1)}>{index+1}</button>
          
