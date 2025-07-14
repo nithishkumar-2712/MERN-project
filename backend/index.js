@@ -13,7 +13,7 @@ Connect()
 const port = process.env.PORT
 app.use(express.json())
 app.use("/public", express.static("public"));
-app.use(cors({origin:["http://localhost:5173"],credentials:true}))
+app.use(cors({origin:["https://mern-project-fronend.onrender.com/"],credentials:true}))
 app.use(cookieParser())
 app.use(Order)
 app.use(Register)
