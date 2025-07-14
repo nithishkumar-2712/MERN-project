@@ -1,7 +1,7 @@
 
 import Axios from "axios";
 const axios = Axios.create({
-  baseURL: "http://localhost:3000", // ✅ Backend server URL
+  baseURL: "https://aathia-backend.onrender.com", // ✅ Backend server URL
   withCredentials: true,            // ✅ Allow sending cookies (like JWT)
 });
 
