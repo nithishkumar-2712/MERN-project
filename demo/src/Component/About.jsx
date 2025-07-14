@@ -76,7 +76,7 @@ import { toast } from 'react-toastify'
       <div className="col-12 col-md-6 col-lg-4 mb-4" key={index}>
 
     <div className="card dig animate__animated animate__fadeInLeft">
-      <img src={`https://aathia-backend.onrender.com${item.product.file}`} className="card-img-top imgager" alt="..."/>
+      <img src={`http://localhost:3000${item.product.file}`} className="card-img-top imgager" alt="..."/>
       <div className="card-body bg-black">
         <p className="card-text text-light font-family">S:NO:{index+1}</p> 
         <h5 className="card-title text-light font-family">NAME:{item.product.name}</h5>

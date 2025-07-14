@@ -53,7 +53,7 @@ import { toast } from 'react-toastify'
         <div className=' col-12 col-md-6 col-lg-4 mb-4' key={item._id ||index}>
     
        <div className="card animate__animated animate__fadeInLeft" style={{width: "18"}}>
-                <img src={`https://aathia-backend.onrender.com${item.file}`} className="card-img-top imgage" alt="..." width={200} height={350}/>
+                <img src={`http://localhost:3000${item.file}`} className="card-img-top imgage" alt="..." width={200} height={350}/>
       <div  className="card-body">
                 <p className="card-text font-family"> S.NO: {index+1}</p>
                <h5 className="card-title font-family">NAME: {item.name}</h5>
