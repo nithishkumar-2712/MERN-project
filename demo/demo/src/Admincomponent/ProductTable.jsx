@@ -83,7 +83,7 @@ const handleUpdate = async (id,editCheck) => {
           {count.map((item, index) => (
             <tr key={index}>
               <td className='font-family'>{index + 1}</td>
-              <td> <img src={`http://localhost:3000${item.file}`} width={150} height={110}/></td>
+              <td> <img src={`https://mern-project-backend-l67m.onrender.com${item.file}`} width={150} height={110}/></td>
               <td className='font-family'>{item.name}</td>
               <td className='font-family'>{item.price}</td>
               <td className='font-family'>{item.stock}</td>
