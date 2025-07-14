@@ -5,6 +5,10 @@ require("dotenv").config();
  const Registeruser=async(req,res)=>{
     const{name,email,password,age}=req.body
     try {
+        const same=await registerModel.findOne({email:email})
+        if(same){
+            return res.json({success:false,message:"this email was already register change email"})
+        }
         const hasspassword=  await bcrypt.hash(password,10)
         const data=await registerModel.create({name,email,password:hasspassword,age})
         const token=jwt.sign({id:data._id},process.env.JWT_SECRET,{expiresIn:"8d"})

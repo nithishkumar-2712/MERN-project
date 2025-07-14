@@ -6,10 +6,11 @@ import { toast } from 'react-toastify'
  function Home() {
   const[count,setCount]=useState([])
   const[totalpage,setTotalpage]=useState()
+  const [loading, setLoading] = useState(true);
   const[total,setTotal]=useState()
   const pagenation=async(page)=>{   
     try {
-      const{data}= await axios.get(`fethch?_limit=9&_page=${page}`)
+      const{data}= await axios.get(`/fetch?_limit=9&_page=${page}`)
           if(data.success){
             setCount(data.data)
             setTotalpage(data.totalpage)
@@ -22,7 +23,9 @@ import { toast } from 'react-toastify'
       
     } catch (error) {
       console.log(error)
-    }
+    }finally {
+    setLoading(false); // loading false
+  }
   }
   useEffect(()=>{
     pagenation(1)
@@ -49,10 +52,17 @@ import { toast } from 'react-toastify'
     <h1 className='h1 font-family font-size text-light'> Multi-Product</h1>
     <div className=' container'>
       <div className='row'>
+            {loading ? (
+        <div className="text-light text-center w-100">
+          <h2>Loading...</h2>
+        </div>
+      ) : (
+        <>
+      
       { count.map((item,index)=>(
         <div className=' col-12 col-md-6 col-lg-4 mb-4' key={item._id ||index}>
     
-       <div className="card animate__animated animate__fadeInLeft" style={{width: "18"}}>
+       <div className="card animate__animated animate__fadeInLeft" style={{width: "18rem"}}>
                 <img src={`http://localhost:3000${item.file}`} className="card-img-top imgage" alt="..." width={200} height={350}/>
       <div  className="card-body">
                 <p className="card-text font-family"> S.NO: {index+1}</p>
@@ -73,6 +83,8 @@ import { toast } from 'react-toastify'
         <button className='btn specal' onClick={()=>pagenation(totalpage)}>LAST</button>
        </div>
         
+       </>
+      )}
           </div>
     </div>
         </div>

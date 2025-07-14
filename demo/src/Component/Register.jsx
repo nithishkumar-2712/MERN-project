@@ -18,7 +18,7 @@ const onSubmit =async(send) => {
         navigate("/")
         checkToken()
       }else{
-        console.log(data.message)
+        toast.warning(data.message)
       }
     } catch (error) {
       console.log(error.message)
