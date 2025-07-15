@@ -1,7 +1,7 @@
 
 import Axios from "axios";
 const axios = Axios.create({
-  baseURL:"https://mern-project-t-shirt.onrender.com", // ✅ Backend server URL
+  baseURL:import.meta.env.VITE_API_URL, // ✅ Backend server URL
   withCredentials: true,            // ✅ Allow sending cookies (like JWT)
 });
 
