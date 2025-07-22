@@ -13,7 +13,7 @@ Connect()
 const port = process.env.PORT
 app.use(express.json())
 app.use("/public", express.static("public"));
-app.use(cors({origin:["http://localhost:5173"],credentials:true}))
+app.use(cors({origin:["https://forend.onrender.com"],credentials:true}))
 // app.use(cors({
 //   origin: ["http://localhost:5173", "https://maharajan-t-shirt.onrender.com"],
 //   credentials: true
