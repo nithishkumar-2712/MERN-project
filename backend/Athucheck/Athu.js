@@ -1,6 +1,6 @@
 const jwt =require("jsonwebtoken")
 const registerModel = require("../Schema/RegisterSchema")
-const { findById } = require("../Schema/OrderSchema")
+// const { findById } = require("../Schema/OrderSchema")
 require("dotenv").config();
  const Athu=async(req,res,next)=>{
     const{token}= req.cookies
