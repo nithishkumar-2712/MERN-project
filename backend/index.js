@@ -13,21 +13,7 @@ Connect()
 const port = process.env.PORT
 app.use(express.json())
 app.use("/public", express.static("public"));
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://forend.onrender.com"
-];
-app.use(cors({
-  // origin:"https://forend.onrender.com",
-  // credentials:true
-    origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-}))
+app.use(cors({origin:["https://forend.onrender.com"],credentials:true}))
 // app.use(cors({
 //   origin: ["http://localhost:5173", "https://maharajan-t-shirt.onrender.com"],
 //   credentials: true
