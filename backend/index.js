@@ -13,9 +13,7 @@ Connect()
 const port = process.env.PORT
 app.use(express.json())
 app.use("/public", express.static("public"));
-app.use(cors({origin:
-    "http://localhost:5173",
-    credentials:true}))
+app.use(cors())
 app.use(cookieParser())
 app.use(Order)
 app.use(Register)
