@@ -13,7 +13,7 @@ Connect()
 const port = process.env.PORT
 app.use(express.json())
 app.use("/public", express.static("public"));
-app.use(cors({origin:["https://forend.onrender.com"],
+app.use(cors({origin:["http://localhost:5173/"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials:true}))

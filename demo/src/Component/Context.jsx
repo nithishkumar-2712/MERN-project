@@ -44,7 +44,7 @@ useEffect(()=>{
           count.map((item,index) => (
             <tr key={index}>
               <td>{index+ 1}</td>
-              <td><img src={`https://backend-880n.onrender.com${item.product.file}`}  width={100} height={100}/></td>
+              <td><img src={`http://localhost:3000${item.product.file}`}  width={100} height={100}/></td>
               <td>{item.product.name}</td>
               <td>{item.qut}</td>
               <td>{item.price}</td>
